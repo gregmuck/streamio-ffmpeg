@@ -69,7 +69,7 @@ module FFMPEG
     end
 
     def convert_audio_bitrate(value)
-      "-b:a #{k_format(value)}"
+      "-ab #{k_format(value)}" # GWM: changed from -b:a which is not supported anymore
     end
 
     def convert_audio_sample_rate(value)
